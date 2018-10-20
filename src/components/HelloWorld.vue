@@ -5,13 +5,25 @@
 </template>
 
 <script>
+
 export default {
   name: "HelloWorld",
+  
   data() {
-    return {};
+    return {
+
+      // BASE路径
+      IMGURL:this.$store.state.imgUrl,
+      SERVERURL:this.$store.state.serverUrl,
+
+
+    };
   },
   created:function(){
-  
+    // 获取token
+    
+    var token = this.$store.token;
+
   },
   computed: {
     
@@ -24,5 +36,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+  @import 'index.css';
 </style>
